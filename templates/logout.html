@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+</head>
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+   .container{
+       width: 320px;
+       margin: auto;
+   }
+   .img{
+       height: fit-content;
+       width: fit-content;
+       margin: auto;
+   }
+   .heading{
+       margin: auto;
+   }
+   button{
+    width:10rem;
+height: 2rem;
+margin-top: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 30px;
+background: skyblue;
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="https://www.bing.com/th?id=OIP.VUA0Z6xuh2cQ4SvrGmYxqAHaE7&w=140&h=95&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+        </div>
+        <div class="heading">
+            <h3>Log Out of Twitter(tinu version)?</h3>
+        </div>
+        <div>
+            <p>You can always log back in at any time. If you just want to switch accounts, you can do that by adding an existing account.</p>
+        </div>
+        <div><form action="" method="POST">
+            {% csrf_token %}
+            <button type="submit">LogOut</button>
+           </form>
+        </div>
+    </div>
+    
+</body>
+</html>

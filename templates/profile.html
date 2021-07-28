@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #button{
+            width:10rem;
+height: 2rem;
+margin-top: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 30px;
+background: skyblue;
+        }
+        #red{
+            color:red
+        }
+        #button:hover{
+width:14rem;
+height: 3rem;
+background:#55acee ;
+        }
+        body{
+        
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        #center{
+            height: fit-content;
+            width: fit-content;
+            margin: auto;
+            
+        }
+        #center img{
+            height:10rem;
+        width: 15rem;   
+         }
+          #bio{
+        outline:10px !important;
+        border-color: #55acee;;
+        width: 20rem;
+        height: 5rem;    
+        display: block  
+    }
+    #Location{
+        width: 20rem;
+        height: 3rem;
+        display: block;
+        border-color: #55acee;;
+        margin-top: 10px;
+    }
+
+    .container{
+        height: 20rem;
+      width: fit-content;
+        margin: auto;
+    }
+    #website{
+        width: 20rem;
+        height: 3rem;
+        display: block;
+        border-color: #55acee;;
+        margin-top: 10px;
+    }
+
+    </style>
+    <div id="center">
+        <img src='https://th.bing.com/th/id/R.b70fb4c875caabc3cbef6f440b8dcac4?rik=sbvfkG%2fDEWfZJQ&riu=http%3a%2f%2fwww.droid-life.com%2fwp-content%2fuploads%2f2014%2f06%2ftwitter-logo.jpg&ehk=jCoG1WOulycUpV1oUZwDA1wUbku3T1fNVk6i7QoRVuc%3d&risl=&pid=ImgRaw'>
+    </div>
+    <div class="container">
+        <h1>Describe yourself</h1>
+        <p>What makes you special? Don't think too hard</p>
+        <p id="red">{{error}}</p>
+        <form action=""  method="POST">
+            {% csrf_token %}
+           <textarea id="bio" placeholder="Your bio" name="bio"></textarea>
+           <textarea id="location" placeholder="Location" name="Location"></textarea>
+           <textarea id="website" placeholder="Website" name="Website"></textarea>
+           <button type="submit" id="button">submit</button>
+        </form>
+    </div>
+</body>
+</html>

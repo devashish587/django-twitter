@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+     k
+
+    .bio-img{
+      margin-top: 4px;}
+      .user-detail{
+        margin-top: 4px;
+
+      }
+      .search-form{
+        max-width: fit-content;
+        margin:auto;
+      }
+      
+  
+img{
+width:2rem;
+height:2rem;
+margin-left: 1px;
+
+
+}
+
+.tweet-icon{
+width: 4rem;
+height: 4rem;
+}
+.navbar li{
+  margin-top: 2rem;
+  list-style: none;
+  }
+  .navbar li :hover{
+    cursor:pointer
+
+  }
+  .navbar{
+    width: 20%;
+    border:  1px solid rgb(167, 154, 154);
+  border-color: rgba(70, 67, 67, 0.3);
+  background-color: rgb(83, 100, 113,0.03);;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  height: fit-content;
+  top:0
+    
+  }
+
+
+li button{
+width:10rem;
+height: 2rem;
+margin-top: 5px;
+color: white;
+border: 1px solid white;
+border-radius: 30px;
+background: skyblue;
+}
+
+.nav-list:hover{
+color: #55acee;
+}
+
+
+.username{
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+
+}
+
+
+.username:hover{
+  border: 1px solid grey;
+  border-radius: 30px;
+  background-color:rgba(57, 211, 18, 0.1); /*where 0.5 stands for 50% opacity*/
+  color:black;
+}
+.nav-list >a  {
+  text-decoration:none;
+}
+.tweets-rows{
+  width: 47%;
+  margin-left: 14px;
+  height: fit-content;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  height: fit-content;
+  
+  
+}
+.search_box{
+  width: 33%;
+  height: 41rem;
+  overflow: auto;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top:0;
+}
+.whole-container{
+  display: flex;
+}
+    
+.twitter_container{
+  margin-top: 30px;
+}
+.twitter_container{
+  background-color: rgb(83, 100, 113,0.03);
+  border:  1px solid rgb(167, 154, 154);
+  border-color: rgba(70, 67, 67, 0.3);
+}
+.twitter_container img{
+  margin :4px;
+  cursor:pointer;
+}
+.profile_div{
+  display:  flex;
+}
+.profile_div > h6{
+ margin-top: 8px;
+}
+.profile_div > img{
+  width :1.5rem;
+  height: 1.5rem;
+}
+.search_box{
+  margin-left:1.5rem;
+  border: 1px solid rgb(167, 154, 154);
+  
+ 
+}
+.news-feed-image{
+  height: 6rem;
+  width: 6rem;
+
+}
+.news-feed{
+  max-height:fit-content;
+  width: 14rem;
+  margin:auto;
+  margin-top:2rem;
+  
+}
+
+@keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }}
+.spin::before {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #1c87c9;
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;}
+
+
+.news-feed{
+  background-color: rgb(83, 100, 113,0.09)
+        }
+#searchableitem{
+  margin-top: 20px;
+}
+
+#name_box{
+  width: 100%;
+  height:2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#name_box> img{
+  height: 0.7rem;
+  width: 1rem;
+  margin-right: 5px;
+  cursor:pointer;
+}
+#profile_pics_dabba{
+  width: 95%;
+  height: 7rem;
+  background-color: rgb(148, 158, 158);
+  margin: auto
+  
+}
+
+.oval{
+  position: relative;
+  top:40px;
+ width: 7rem;
+ height: 6rem;
+ background:white;
+ border:1px solid black;
+ border-radius: 80px;
+}
+
+
+#profile_photo{
+  display: block;
+  height: 5rem;
+  width: 5rem; 
+  margin: auto;
+  position: relative;
+  top:8px;
+
+}
+.detail_username{
+  display: flex;
+  flex-direction:column;
+  margin-left: 3px;
+}
+a{
+text-decoration: none;
+      color: inherit;
+}
+#follow_button{
+width:10rem;
+height: 2rem;
+margin-top: 5px;
+border: 1px solid #1DA1F2;
+border-radius: 30px;
+color: #1DA1F2;
+background-color: white;
+
+}
+.main_div{
+  margin-left:10px;
+}
+.follow_button{
+  display: flex;
+  
+
+}
+.follow_button >h12{
+  margin:6px;
+}
+.profile_container_detail{
+  display: flex;
+}
+.profile_container_detail >h6 {
+  margin-left: 5px;
+}
+.profile_container_detail >img{
+  width :1.5rem;
+  height: 1.5rem;
+}
+.profile_list_tweets{
+  margin-left: 10px;
+}
+.profile_buttons_of_username{
+  display: flex;
+  justify-content: space-around;
+}
+.profile_buttons_of_username> img{
+  height: 1.5rem;
+  width:1.5rem;
+  cursor:pointer
+
+}
+ #dots{
+cursor: pointer;
+display: inline;
+}
+#username_like_count{
+  margin-left: 60px;
+}
+#red{
+ position: relative;
+ left: 100px;
+}
+.devta{
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom:30px;
+  background-color: #f9f9f9;
+  height:fit-content;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  
+}
+
+
+    </style>
+
+    <title>Twitter</title>
+ 
+
+  </head>
+
+  <body>
+  
+  <div class="whole-container">
+    <div class="navbar"> 
+           
+      <ul>
+       
+       <li>
+           <div class="nav-list">
+                <img class ="tweet-icon"src="https://img.icons8.com/officel/2x/twitter.png"></img>
+           </div>
+        </li>
+   
+
+          <li>
+              <div class="nav-list">
+              <img src="https://th.bing.com/th/id/OIP.enl8cyLPjHeaRZiSh9YNQQHaHc?pid=ImgDet&w=150&h=150&c=7"></img><span><a href="http://127.0.0.1:8000/">Home</a></span>
+              </div>
+           </li>
+
+          <li>
+             <div class="nav-list">
+               <img src="https://th.bing.com/th/id/OIP.tJp-ZI7jzFQoFmSXCqyotQHaHa?w=176&h=180&c=7&o=5&pid=1.7"></img><span>Message</span>
+              </div>
+          </li>
+
+          <li>
+              <div class="nav-list">
+              <img src="https://cdn.shrm.org/image/upload/v1504896304/Marketing/user.png"></img><span><a href="http://127.0.0.1:8000/update-profile/">Profile</a></span>
+               </div>
+           </li>
+
+
+           <li>
+             <div class="nav-list">
+               <img src="https://th.bing.com/th/id/OIP.Je3vihQaAFCNALGwAcn3cAHaHa?w=179&h=180&c=7&o=5&pid=1.7"></img><span>More</span>
+             </div>
+           </li>
+
+
+          <li>
+             <div class="nav-list">
+                <form action="api/adding_tweets" id="tweet_form" method ="POST" class="form">
+      
+                  <textarea class= "form-control" name ="content" required ="required" placeholder="add your tweet here"></textarea>
+                  <button type="submit" >Tweet</button>
+              </form>
+             </div>
+          </li>
+       
+        <li>
+          <div class="nav-list username">
+            <div class="bio-img">
+            <img src="https://th.bing.com/th/id/OIP.DVPxPdlN3I0UAfkWOOEZCQHaHa?w=211&h=210&c=7&o=5&pid=1.7">
+            </div>
+            <div class="user-detail">
+            <h5>{{user.username}}</h5>
+            <div class="dropdown">
+            <img  id="dots"height="1.5rem" width="2rem" src="https://th.bing.com/th/id/OIP.7ZvmoDs-6rjiVCpWlm7ZsgHaHa?w=164&h=180&c=7&o=5&pid=1.7">
+            <div class="dropdown-content">
+              <p><a href="http://127.0.0.1:8000/logout/">LogOut {{user.username}} </a><img  height="5px" width="10px"src="https://th.bing.com/th/id/OIP.JH3JmgwwGznjneh4IWUgLgHaHs?w=172&h=180&c=7&o=5&pid=1.7"></p>
+            </div>
+          </div>
+          </div>
+          </div>
+        </li>
+      </ul> 
+
+              
+    </div>
+
+    <div class ="tweets-rows">
+       <h1>Tweets </h1>
+       <div id="change" class="row">loading...</div>
+    </div>
+
+
+    <div class="search_box" id="rowset">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<!-- The form -->
+<div class="search-form">
+<form class="example" action="api/profile/" method="POST" id="profile_name">
+  <input type="text" placeholder="Search profile" name="username">
+  <button type="submit" onsubmit="SearchProfile"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<div id='rowsets'></div>
+
+    <div id="searchableitem">
+    
+    </div>
+    </div>
+    </div>
+   
+    
+  
+  
+   
+      
+    
+ 
+   
+
+
+<script>
+  var search_people = true;
+  var profile_box  = false;
+  var message_box = false;
+  var spinner_about  = false;
+function  dabba5(status,username) {
+  const xhr = new XMLHttpRequest()
+  console.log(status)
+           const data_to_send = JSON.stringify({"username":username,
+           "status" :status})
+           const method = "POST"
+           const url = "api/follow_controller/"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+               search_username(username)
+           }
+           xhr.send(data_to_send)
+
+  
+}
+if (search_people ==true) {
+  dabba1()
+  
+}
+function dabba7() {
+  console.log("hello")
+  if (search_people ==true) {
+  dabba1()
+  
+}
+  
+}
+function dabba6(){
+  document.getElementById("searchableitem").innerHTML = ""
+  var search_people = true
+  dabba7()
+  
+
+}
+function search_username(data){
+  console.log(data)
+  const xhr  =  new XMLHttpRequest()
+  const data_To_be_Send_of_user =  JSON.stringify({"username":data})
+  const url = "api/view-profile/"
+  const method = 'POST'
+  xhr.open(method, url)
+  xhr.responseType = "json"
+  var csrftoken = getCookie('csrftoken');
+  xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+  xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+  xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+  xhr.setRequestHeader('Accept','application/json')
+  xhr.setRequestHeader('Content-Type','application/json')
+  xhr.onload=()=>{
+    var search_people = false
+    response =xhr.response
+    dabba2([response])
+  }
+  xhr.send(data_To_be_Send_of_user)
+}
+  
+
+function dabba4(data) {
+  var date = new Date(data[0]['user']['date_joined'])
+ const div = document.getElementById('searchableitem')
+ div.innerHTML=""
+ const created_div = document.createElement("div")
+ created_div.innerHTML=`  <div bg-color="white" id="name_box">
+            <img  id="cross_button" src="https://th.bing.com/th/id/OIP.q_RNQuiBiDTFHRwElX0GbAHaHx?pid=ImgDet&w=170&h=178&c=7">
+            <h6>${data[0]["user"]["username"]}</h6>
+      </div>
+      <div id="profile_pics_dabba"> 
+        <div class="oval">
+          <img src="data:image/jpeg;base64,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"  id="profile_photo"> 
+        </div>
+      </div>
+      <br>
+      <div class="main_div">
+      <div class="detail_username">
+      <h4>${data[0]["user"]["username"]}</h4>
+     <p>${data[0]["bio"]}</p> 
+     <div> 
+       <img src="https://www.bing.com/th?id=OIP.k2MHxL38IIrKOfLPdWDgywHaHa&w=102&h=102&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"><h12> Joined <b>${date.toDateString()}</b></h12>
+     </div>   
+     <button id="follow_button">${data[0]["status"]}</button>
+    <div class="follow_button">
+      <h12><b>${data[0]["following"]}</b> following</h12>
+      <h12><b>${data[0]["followers"]}</b> followers</h12>
+    </div>
+    </div>
+     <hr>
+     <div id="dhruv_bisht">
+      </div>
+    </div>`
+    div.appendChild(created_div)
+    const container = document.getElementById("cross_button").addEventListener("click",()=>dabba6())
+     const item_button = document.getElementById('follow_button');
+     const item_button_html = document.getElementById('follow_button').innerText
+     item_button.addEventListener('click',()=>dabba5(item_button_html,data[0]["user"]["username"]))
+     
+
+}
+function dabba1(){    
+TopTweets()
+  
+}
+function dabba2(data) {
+     dabba4(data)
+     link(data[0]["user"]["username"])  
+}
+function dabba3(data){
+  try{
+             var hall_of_Fame= document.getElementById("kuch_to_naam");
+             hall_of_Fame.innerHTML =""
+             hall_of_Fame.remove()
+             var searchableitem = document.getElementById("searchableitem")
+  var created_div_hello  = document.createElement("div")
+  created_div_hello.setAttribute("id","kuch_to_naam")
+  searchableitem.appendChild(created_div_hello)
+  searchableitem.appendChild(created_div_hello)
+             }
+             catch{
+  var searchableitem = document.getElementById("searchableitem")
+  var created_div_hello  = document.createElement("div")
+  created_div_hello.setAttribute("id","kuch_to_naam")
+  searchableitem.appendChild(created_div_hello)
+}
+  
+  
+  for (let i = 0; i < data.length; i++) {
+    const ayush_Tripathi =document.createElement("div")
+    ayush_Tripathi.innerHTML=`
+  <!-- loop starts here -->
+        <div class="profile_list_tweets">
+              <div class="profile_container_detail">
+                <img src='https://th.bing.com/th/id/OIP.DVPxPdlN3I0UAfkWOOEZCQHaHa?w=211&h=210&c=7&o=5&pid=1.7'><h6>${data[i]["user"]["username"]}<h6></h6>
+              </div>
+              <p margin_top="10px;">${data[i]["content"]}</p>
+              <div class="profile_buttons_of_username" id="mcgregor${i}">
+              </div> 
+              <div><h12 id="username_like_count">${data[i]["likes"]}</h12>
+              </div>
+              
+
+  
+        </div>       
+        <hr>
+    </div>`
+    created_div_hello.appendChild(ayush_Tripathi)
+   
+    const naana = document.getElementById('mcgregor'+i+'')
+    var button1 = new Image();
+    button1.src ="https://th.bing.com/th/id/OIP.81XqDDBaWpIFWspB07CLfwHaHa?w=218&h=217&c=7&o=5&pid=1.7" 
+     button1.addEventListener("click" ,()=>like_username(data[i]))
+    naana.appendChild(button1)
+
+
+    var button2 = new Image();
+    button2.src ="https://th.bing.com/th/id/OIP.CmaH_X1Ua8zCt3cDS-UBewHaFj?w=249&h=186&c=7&o=5&pid=1.7" 
+     button2.addEventListener("click" ,()=>unlike_username(data[i]))
+    naana.appendChild(button2)
+
+    var button2 = new Image();
+    button2.src ="https://www.bing.com/th?id=OIP.hBWs1ClscHG7Qurv8W0cBwD6D6&w=122&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" 
+     button2.addEventListener("click" ,()=>retweet_username(data[i]))
+    naana.appendChild(button2)
+    
+  
+  
+  }}
+
+  
+function retweet_username(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'retweet'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"retweet"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+            
+               load_tweet()
+               
+           }
+           xhr.send(data_to_send)
+          }
+
+          function like_username(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'like'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"like"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+            link(tweet["user"]["username"])
+           }
+           xhr.send(data_to_send)
+  
+  }
+
+  function error() {
+   const item =  document.getElementById('searchableitem');
+   item.innerHTML ="<h1 id='kuch_t'> No result found</h1>"
+    
+  }
+
+  function unlike_username(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'like'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"unlike"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+             link(tweet["user"]["username"])
+           }
+           xhr.send(data_to_send)
+  }
+
+
+
+function SearchProfile(event){
+  event.preventDefault()
+  const myform = event.target 
+  const data_send = new FormData(myform);
+  console.log(data_send)
+  const url = myform.getAttribute("action")
+  const method = myform.getAttribute("method")
+  xhr = new XMLHttpRequest()
+  var csrftoken = getCookie('csrftoken');
+  xhr.open(method, url)
+  xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+  xhr.onload=()=>{
+    if (xhr.status  ==200) {
+      var search_people = false
+    response =xhr.response
+    response = [JSON.parse(response)]
+    if (response =={}) {
+ error2()      
+    }
+    else{
+    dabba2(response)
+    }
+    }
+   
+    else{
+      var search_people = false
+      error()
+    }
+  }
+xhr.send(data_send)
+
+}
+
+
+
+function link(username) {
+  const xhr = new XMLHttpRequest()
+  var data_to_be_send =JSON.stringify({"usernames":username})
+  xhr.open("POST","api/username-tweets/")
+  var csrftoken = getCookie('csrftoken');
+  xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+  xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+  xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+  xhr.setRequestHeader('Accept','application/json')
+  xhr.setRequestHeader('Content-Type','application/json')
+  xhr.onload=()=>{
+    var response= xhr.response
+  
+    response =JSON.parse(xhr.response)
+    
+    dabba3(response)
+
+  }
+xhr.send(data_to_be_send)
+
+  
+}
+ 
+  
+
+
+const tweet_form = document.getElementById("profile_name")
+tweet_form.addEventListener("submit", SearchProfile)
+
+
+   
+   function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+
+function tweet_adder(wwe){
+     for (let i = 0; i < wwe.length; i++) {
+          var currentDate = new Date(wwe[i].timestamp) || new Date().toLocaleString()
+          var date = currentDate.getDate();
+          var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+          var year = currentDate.getFullYear();
+          var time = wwe[i].timestamp.slice(11,16);
+           var dateString = `${time}  ${date + "-" +(month + 1) + "-" + year}`
+              var div = document.getElementById("change")
+              var created_div = document.createElement("create_div")
+              created_div.setAttribute("class",'twitter_container')
+              var tweets_content =  document.createElement("p");
+              var profile_div= document.createElement("div")
+              profile_div.setAttribute("class","profile_div")
+              var button2 = new Image();
+              button2.src= "https://th.bing.com/th/id/OIP.DVPxPdlN3I0UAfkWOOEZCQHaHa?w=211&h=210&c=7&o=5&pid=1.7"
+              button2.addEventListener("click", ()=>search_username(wwe[i]["user"]["username"]))
+              const head = document.createElement('h6')
+              head.innerHTML =`${wwe[i].user.username}`;
+              var p =document.createElement("p")
+              p.setAttribute('id' ,'red')
+              p.innerHTML =`${dateString}`
+              profile_div.appendChild(button2)
+              profile_div.appendChild(head)
+              profile_div.appendChild(p)
+              created_div.appendChild(profile_div)
+        
+             
+              // before starts here
+              var text = document.createTextNode(wwe[i]["content"])
+              var button =new Image();
+              button.src =" https://th.bing.com/th/id/OIP.81XqDDBaWpIFWspB07CLfwHaHa?w=218&h=217&c=7&o=5&pid=1.7"
+             
+              tweets_content.appendChild(text)
+              created_div.appendChild(tweets_content)
+              button.style.width ="1.5rem";
+              button.style.height ="1rem";
+              var like_counter =document.createElement('span');
+              like_counter.innerHTML =""+wwe[i].likes+""
+              created_div.appendChild(button)
+              created_div.appendChild(like_counter)
+              button.addEventListener("click" ,()=>likehandler(wwe[i]))
+
+              // unlike button starts here
+              var button2 = new Image();
+              button2.src ="https://th.bing.com/th/id/OIP.FVatqkcLiQ_J6U3Qz6p31AHaHa?w=180&h=180&c=7&o=5&pid=1.7"
+              button2.style.width ="1.3rem";
+              button2.style.height ="1rem";
+              button2.addEventListener("click" ,()=>unlikehandler(wwe[i]))
+              created_div.appendChild(button2)
+            
+              // retweet button starts here
+              var button3 = new Image() ;
+              button3.src = "https://www.bing.com/th?id=OIP.hBWs1ClscHG7Qurv8W0cBwD6D6&w=122&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+              button3.style.width ="1.5rem";
+              button3.style.height ="1rem";
+              button3.addEventListener("click" ,()=>retweethandler(wwe[i]))
+              created_div.appendChild(button3)
+              div.appendChild(created_div)
+
+
+          }}
+  
+   
+
+function retweethandler(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'retweet'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"retweet"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+               console.log(xhr.response)
+               load_tweet()
+           }
+           xhr.send(data_to_send)
+
+}
+function handlerdata(event){
+  event.preventDefault()
+  const myform = event.target;
+  const data_send = new FormData(myform);
+  const url = myform.getAttribute("action")
+  const method = myform.getAttribute("method")
+  xhr = new XMLHttpRequest()
+  xhr.open(method,url)
+  var csrftoken = getCookie('csrftoken');
+  xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+  xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+  xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+  xhr.onload=()=>{
+  var response = [xhr.response]
+  console.log(response)
+  response = [JSON.parse(response)]
+  console.log(typeof response)
+  tweet_adder(response)
+  myform.reset()
+
+  
+  
+  }
+  xhr.send(data_send)
+}
+
+
+
+const tweet_forms = document.getElementById("tweet_form")
+tweet_forms.addEventListener("submit", handlerdata)
+function likehandler(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'like'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"like"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+               load_tweet()
+           }
+           xhr.send(data_to_send)
+  
+  }
+
+  function unlikehandler(tweet){
+           const xhr = new XMLHttpRequest()
+           var action = 'like'
+           data_to_send = JSON.stringify({id: tweet.id,
+           action :"unlike"})
+           const method = "POST"
+           const url = "api/like-controller"
+           xhr.responseType = "json"
+           xhr.open(method,url)
+           var csrftoken = getCookie('csrftoken');
+           xhr.setRequestHeader("HTTP_X_REQUESTED_WITH","XMLHttpRequest")
+           xhr.setRequestHeader("X-Requested-With","XMLHttpRequest")
+           xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+           xhr.setRequestHeader('Accept','application/json')
+           xhr.setRequestHeader('Content-Type','application/json')
+           xhr.onload=()=>{
+               load_tweet()
+           }
+           xhr.send(data_to_send)
+  }
+
+
+function load_tweet(){ 
+        var div = document.getElementById("change")
+      const  xhr = new XMLHttpRequest()
+      const url ="api/tweets_list"
+      xhr.responseType = "json"   
+      xhr.open("GET",url)
+      xhr.onload = ()=>{
+          tweets  = xhr.response
+          div.innerHTML =""
+          tweet_adder(tweets)
+       
+          
+      }
+      
+      xhr.send()}
+      
+function news_adder(data){
+const row = document.getElementById("searchableitem");
+var a = 5
+const conor = document.getElementById('rowsets')
+conor.innerHTML =''
+for (let i= 0; i<a; i++) {
+  const element = data['articles'][i];
+  const div  = document.createElement('div')
+div.setAttribute("class","news-feed")
+div.innerHTML ='<img class ="news-feed-image" src='+element.urlToImage+'><h6><a href='+element.url+'>'+element.title+'<a/></h6>'
+row.appendChild(div)
+}
+  
+}
+
+
+
+  
+
+function error2(){
+  const container_div = document.getElementById('searchableitem')
+  const constable = document.createElement("h3")
+  constable.innerText ="NO Tweet"
+  container_div.appendChild(constable)
+};
+function TopTweets(){
+var url = 'api/news-feed/';
+var method  = "POST"
+var xhr = new XMLHttpRequest()
+
+xhr.open(method ,url)
+xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'))
+xhr.onprogress=()=>{
+  const divinder = document.getElementById('rowsets')
+  divinder.innerHTML ='<div class="spin"></div>'
+}
+const data  = xhr.onload=()=>{
+  var json = JSON.parse(xhr.response)
+
+  news_adder(json)
+}
+xhr.send()
+}
+if (spinner_about==true) {
+  spinners_that_revolve()
+}
+
+load_tweet()
+
+
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+</body>
+</html>
